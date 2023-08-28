@@ -1,11 +1,17 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   margin: 0 auto;
   padding: 0;
   width: 1440px;
 }
 
-header {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* HEADER */
+.ly_header {
   background-color: #fff;
   /* color: #fff;
   text-align: center;
@@ -16,13 +22,14 @@ header {
   height: 106px;
 }
 
-header .nav {
+.bl_navBar {
   display: flex;
   align-items: flex-start;
   gap: 60px;
   margin: 42px 0px 47px 0;
+  list-style: none;
 }
-header .nav-item {
+.bl_navBar_navItem {
   cursor: pointer;
   position: relative;
   color: #000;
@@ -33,9 +40,9 @@ header .nav-item {
   line-height: normal;
 }
 
-.nav .nav-item::after {
+.bl_navBar_navItem::after {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 2px;
@@ -44,18 +51,18 @@ header .nav-item {
   transition: width 0.3s ease-in-out;
   bottom: -2px;
 }
-.nav .nav-item.active::after {
+.bl_navBar_navItem.active::after {
   width: 100%;
 }
 
-header .header-logo {
+.bl_headerLogo {
   width: 95px;
   height: 40px;
   /* transform: translate(-139%, 5%); */
   margin: 35px 330px 31px 192px;
 }
 
-header .toolbar {
+.bl_toolBar {
   display: flex;
   align-items: center;
   justify-items: center;
@@ -63,7 +70,7 @@ header .toolbar {
   margin: 33px 0 38px 0;
 }
 
-header .toolbar .searchBox {
+.bl_toolBar_searchBox {
   position: relative;
   width: 155px;
   height: 35px;
@@ -71,7 +78,7 @@ header .toolbar .searchBox {
   background: rgba(217, 217, 217, 0.35);
 }
 
-.toolbar .searchBox .searchText {
+.bl_toolBar_searchBox_searchText {
   all: initial;
   position: absolute;
   left: 19px;
@@ -85,7 +92,7 @@ header .toolbar .searchBox {
   width: 100px;
 }
 
-.toolbar .searchBox img {
+.bl_toolBar_searchBox_searchIcon {
   width: 22px;
   height: 22px;
   position: absolute;
@@ -93,20 +100,23 @@ header .toolbar .searchBox {
   top: 6px;
 }
 
-.toolbar a img {
+.bl_toolBar_cartIcon {
   width: 18px;
   height: 18px;
 }
-.banner1 {
+
+/* BANNER 1 */
+
+.bl_banner1 {
   position: relative;
   height: 536px;
 }
-.banner1 img {
+.bl_banner_img {
   max-width: 100%;
   height: auto;
   background: #f7f6f0;
 }
-.banner1 .text-on-banner1 {
+.bl_banner1_txt {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -117,7 +127,7 @@ header .toolbar .searchBox {
   align-items: center;
   gap: 8px;
 }
-.text-on-banner1 .title-container {
+.bl_banner1_ttl {
   display: flex;
   width: 292px;
   height: 100px;
@@ -125,7 +135,7 @@ header .toolbar .searchBox {
   justify-content: center;
   align-items: center;
 }
-.text-on-banner1 .title-container h1 {
+.bl_banner1_ttl h1 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -139,7 +149,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.text-on-banner1 .title-container h2 {
+.bl_banner1_ttl h2 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -153,7 +163,15 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.banner1 .text-on-banner1 h3 {
+.bl_banner1_breakLine {
+  width: 256.5px;
+  height: 0px;
+  stroke-width: 1px;
+  stroke: #000;
+  border: 1px solid #000;
+}
+
+.bl_banner1_txt h3 {
   margin: 0;
   padding: 0;
   width: 282px;
@@ -169,22 +187,8 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.banner1 .text-on-banner1 img {
-  width: 256.5px;
-  height: 0px;
-  border: 1px solid black;
-  stroke-width: 1px;
-  stroke: #000;
-}
-.banner1-break-line {
-  width: 256.5px;
-  height: 0px;
-  stroke-width: 1px;
-  stroke: #000;
-  border: 1px solid #000;
-}
-
-.season-collections {
+/* SEASON COLLECTION */
+.bl_seasonCollection {
   margin: 60px 100px;
 }
 .primary-heading {
@@ -200,19 +204,19 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.collection-item {
+.bl_seasonCollection_item {
   display: inline-flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
 }
 
-.collection-item div img {
+.bl_seasonCollection_item_img {
   display: block;
   width: 397px;
   height: 496px;
 }
-.collection-item div h2 {
+.bl_seasonCollection_item_season {
   color: #000;
   text-align: center;
   margin-top: 26px;
@@ -225,7 +229,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.collection-item div button {
+.bl_seasonCollection_item_more {
   border: initial;
   padding: 12px 30px;
   border-radius: 20px;
@@ -233,26 +237,27 @@ header .toolbar .searchBox {
   display: block;
   background: #f7f6f0;
 }
-.collection-item div button:hover {
+.bl_seasonCollection_item_more:hover {
   background: rgba(217, 217, 217, 0.35);
 }
 
-.best-seller {
+/* BEST SELLER */
+.bl_bestSeller {
   margin: 60px 100px;
 }
 
-.bseller-items {
+.bl_bestSeller_item_wrap {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.bseller-items div img {
+.bl_bestSeller_item_wrap div img {
   width: 391.475px;
   height: 496px;
   flex-shrink: 0;
 }
-.bseller-items div h3 {
+.bl_bestSeller_item_wrap div h3 {
   color: #000;
   margin-top: 14px;
   margin-bottom: 4px;
@@ -264,7 +269,7 @@ header .toolbar .searchBox {
   font-weight: 400;
   line-height: normal;
 }
-.bseller-items div h4 {
+.bl_bestSeller_item_wrap div h4 {
   color: #000;
   text-align: center;
   /* h4 */
@@ -274,7 +279,7 @@ header .toolbar .searchBox {
   font-weight: 400;
   line-height: normal;
 }
-.bseller-prev-control-icon {
+.bl_bestSeller_prevController {
   display: inline-flex;
   padding: 10px;
   align-items: flex-start;
@@ -283,14 +288,14 @@ header .toolbar .searchBox {
   top: 217px;
   left: 0;
 }
-.bbseller-prev-control-icon img {
+.bl_bestSeller_prevController img {
   width: 25.5px;
   height: 41px;
   fill: #fff;
   stroke-width: 3px;
   stroke: #fff;
 }
-.bseller-next-control-icon {
+.bl_bestSeller_nextController {
   display: inline-flex;
   padding: 10px;
   align-items: flex-start;
@@ -300,24 +305,27 @@ header .toolbar .searchBox {
   right: 0;
 }
 
-.bbseller-next-control-icon img {
+.bl_bestSeller_nextController img {
   width: 25.5px;
   height: 41px;
   fill: #fff;
   stroke-width: 3px;
   stroke: #fff;
 }
-.banner2 {
+
+/* BANNER 2 */
+
+.bl_banner2 {
   position: relative;
   height: 536px;
 }
 
-.banner2 img {
+.bl_banner2_img {
   height: 536px;
   background: #f7f6f0;
 }
 
-.banner2 .text-on-banner2 {
+.bl_banner2_txt {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -328,7 +336,7 @@ header .toolbar .searchBox {
   align-items: center;
   gap: 8px;
 }
-.banner2 .text-on-banner2 h1 {
+.bl_banner2_txt h1 {
   color: #000;
   text-align: center;
 
@@ -340,7 +348,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.banner2 .text-on-banner2 h3 {
+.bl_banner2_txt h3 {
   color: #000;
   text-align: center;
   margin-top: 12px;
@@ -353,7 +361,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.banner2 .text-on-banner2 button {
+.bl_banner2_txt button {
   all: initial;
   font-family: Inter;
   display: inline-flex;
@@ -365,7 +373,7 @@ header .toolbar .searchBox {
   background: #fff;
 }
 
-.banner2 .text-on-banner2 button:hover {
+.bl_banner2_txt button:hover {
   all: initial;
   font-family: Inter;
   display: inline-flex;
@@ -377,7 +385,8 @@ header .toolbar .searchBox {
   background: rgba(217, 217, 217, 0.35);
 }
 
-.categories {
+/* OUR PRODUCT */
+.bl_ourProducts_categories {
   display: flex;
   justify-content: space-between;
   margin: 0px 291px 8px 291px;
@@ -385,11 +394,11 @@ header .toolbar .searchBox {
   cursor: pointer;
 }
 
-.categories h2.active {
+.bl_ourProducts_category_item.active {
   color: #000;
   border-bottom: 2px solid black;
 }
-.categories h2 {
+.bl_ourProducts_category_item {
   position: relative;
   color: #505050;
   padding: 0 1px 4px 1px;
@@ -401,9 +410,9 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.categories h2.active::after {
+.bl_ourProducts_category_item.active::after {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   width: 145px;
   height: 79px;
@@ -416,14 +425,14 @@ header .toolbar .searchBox {
   z-index: -2;
 }
 
-.product-items {
+.bl_ourProducts_items {
   border-radius: 10px;
   background: #f7f6f0;
   margin: 0 63px;
   padding-top: 45px;
   padding-bottom: 35px;
 }
-.item-container {
+.bl_ourProducts_items_wrap {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-column-gap: 24px;
@@ -431,13 +440,11 @@ header .toolbar .searchBox {
   margin: 0px 38px 32px 38px;
 }
 
-.item-container div {
-}
-.item-container div img {
+.bl_ourProducts_items_wrap div img {
   width: 397px;
   height: 496px;
 }
-.item-container div h3 {
+.bl_ourProducts_items_wrap div h3 {
   color: #000;
   margin: 19px 0 4px 0;
   text-align: center;
@@ -448,7 +455,7 @@ header .toolbar .searchBox {
   font-weight: 400;
   line-height: normal;
 }
-.item-container div h4 {
+.bl_ourProducts_items_wrap div h4 {
   color: #000;
   text-align: center;
   /* h4 */
@@ -459,7 +466,7 @@ header .toolbar .searchBox {
   line-height: normal;
   margin: 0;
 }
-.see-more {
+.bl_ourProducts_items_more {
   border: initial;
   display: flex;
   padding: 12px 30px;
@@ -470,10 +477,10 @@ header .toolbar .searchBox {
   align-items: center;
   gap: 10px;
 }
-.see-more:hover {
+.bl_ourProducts_items_more:hover {
   background: rgba(217, 217, 217, 0.35);
 }
-.see-more div {
+.bl_ourProducts_items_more div {
   color: #000;
 
   /* button */
@@ -483,19 +490,22 @@ header .toolbar .searchBox {
   font-weight: 400;
   line-height: norma l;
 }
-.reviews {
+
+/* REVIEWS */
+
+.bl_reviews {
   margin: 60px 99px 0 99px;
   padding-bottom: 44px;
 }
 
-.review-items {
+.bl_reviews_items {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 23px;
 }
 
-.review-items div {
+.bl_reviews_items div {
   width: 398px;
   height: 631px;
   flex-shrink: 0;
@@ -504,13 +514,13 @@ header .toolbar .searchBox {
   background: #f7f6f0;
 }
 
-.review-product {
+.bl_reviews_item_img {
   width: 329px;
   height: 410px;
 
   margin: 28px 35px 24px 35px;
 }
-.review-items div h3 {
+.bl_reviews_items div h3 {
   color: #000;
   text-align: center;
   margin-bottom: 6px;
@@ -522,12 +532,12 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.five-rating {
+.bl_reviews_item_rating {
   display: block;
   margin: 0 auto 4px auto;
 }
 
-.review-customer {
+.bl_reviews_item_customer {
   margin-bottom: 4px;
   color: #000;
   text-align: center;
@@ -550,7 +560,7 @@ header .toolbar .searchBox {
   font-weight: 400;
   line-height: normal;
 }
-.review-prev-control-icon {
+.bl_reviews_prevController {
   display: flex;
   width: 26px;
   height: 41px;
@@ -560,7 +570,7 @@ header .toolbar .searchBox {
   top: 299px;
   left: 5px;
 }
-.review-prev-control-icon img {
+.bl_reviews_prevController img {
   width: 25.5px;
   height: 41px;
   flex-shrink: 0;
@@ -569,7 +579,7 @@ header .toolbar .searchBox {
   stroke: #777;
 }
 
-.review-next-control-icon {
+.bl_reviews_nextController {
   display: flex;
   width: 26px;
   height: 41px;
@@ -579,7 +589,7 @@ header .toolbar .searchBox {
   top: 299px;
   right: 5px;
 }
-.review-next-control-icon img {
+.bl_reviews_nextController img {
   width: 25.5px;
   height: 41px;
   flex-shrink: 0;
@@ -587,7 +597,10 @@ header .toolbar .searchBox {
   stroke-width: 3px;
   stroke: #777;
 }
-.sign-up {
+
+/* SIGN UP */
+
+.bl_signUp {
   padding: 76px 172px 76px 128px;
   height: 797px;
   background: #f7f6f0;
@@ -597,7 +610,7 @@ header .toolbar .searchBox {
   gap: 86px;
 }
 
-.benefits {
+.bl_signUp_benefits {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -607,7 +620,7 @@ header .toolbar .searchBox {
   border-right: 1px solid #000;
 }
 
-.benefits h1 {
+.bl_signUp_benefits h1 {
   width: 547px;
   display: block;
   color: #000;
@@ -620,23 +633,23 @@ header .toolbar .searchBox {
   font-weight: 600;
   line-height: normal;
 }
-.benefits-container {
+.bl_signUp_benefits_wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
 }
-.benefit {
+.bl_signUp_benefit_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 6px;
 }
-.benefit img {
+.bl_signUp_benefit_item img {
   width: 30px;
   height: 30px;
 }
-.benefit h2 {
+.bl_signUp_benefit_item h2 {
   all: initial;
   color: #000;
   text-align: center;
@@ -647,7 +660,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.sign-up-options {
+.bl_signUp_options {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -655,21 +668,21 @@ header .toolbar .searchBox {
   gap: 23px;
   padding: 82px 0 82px 0;
 }
-.sign-up-form form {
+.bl_signUp_form form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 }
-.text-container {
+.bl_signUp_form_inputs {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
 }
-.text-container > input {
+.bl_signUp_form_inputs > input {
   border: initial;
   display: block;
   width: 463px;
@@ -678,14 +691,14 @@ header .toolbar .searchBox {
   background: #fff;
   text-align: center;
 }
-.terms {
+.bl_signUp_form_inputs_terms {
   display: flex;
   align-items: center;
   justify-items: center;
   flex-direction: row;
   gap: 12px;
 }
-.terms > input {
+.bl_signUp_form_inputs_terms > input {
   border: initial;
   width: 26px;
   height: 26px;
@@ -693,7 +706,7 @@ header .toolbar .searchBox {
   background: #fff;
 }
 
-.terms label {
+.bl_signUp_form_inputs_terms label {
   margin: auto 0;
   color: #000;
   text-align: center;
@@ -706,7 +719,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.terms label span {
+.bl_signUp_form_inputs_terms label span {
   color: #000;
   font-family: Inter;
   font-size: 16px;
@@ -715,27 +728,27 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.sign-up-submit {
+.bl_signUp_form_submit {
   border: initial;
   padding: 12px 30px;
   border-radius: 20px;
   background: #fff;
 }
 
-.break-line {
+.bl_signUp_options_breakLine {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 11px;
 }
 
-.break-line hr {
+.bl_signUp_options_breakLine hr {
   width: 211px;
   height: 1px;
   background: #000;
 }
 
-.break-line span {
+.bl_signUp_options_breakLine span {
   color: #000;
   text-align: center;
 
@@ -747,7 +760,7 @@ header .toolbar .searchBox {
   line-height: normal;
 }
 
-.sign-up-thirdparties {
+.bl_signUp_options_thirdParties {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -755,7 +768,7 @@ header .toolbar .searchBox {
   flex-direction: column;
 }
 
-.sign-up-thirdparties button {
+.bl_signUp_options_thirdParties button {
   border: initial;
   display: flex;
   justify-content: space-between;
@@ -766,45 +779,45 @@ header .toolbar .searchBox {
   background: #fff;
 }
 
-.sign-up-thirdparties button:hover {
+.bl_signUp_options_thirdParties button:hover {
   background: rgba(217, 217, 217, 0.35);
 }
 
-footer {
+/* FOOTER */
+
+.ly_footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-footer .information {
+.bl_footer_information {
   display: flex;
   align-items: flex-start;
 }
 
-.logo-container {
+.bl_logo_wrap {
   margin: 102px 112px 101px 101px;
 }
-.logo-container img {
+.bl_logo_wrap img {
   width: 154px;
   height: 58px;
 }
 
-.about-us {
+.bl_aboutUs {
   width: 176px;
   margin: 48px 0 77px 0;
 }
 
-.get-help {
+.bl_getHelp {
   width: 172px;
   margin: 48px 0 48px 0;
 }
-.follow-us {
+.bl_followUs {
   width: 363px;
   margin: 48px 0 48px 0;
 }
-.rules {
-  margin: 230px 16px 12px 0;
-}
-.footer-heading {
+
+.bl_footer_heading {
   color: #000;
   font-family: Inter;
   font-size: 16px;
@@ -813,13 +826,13 @@ footer .information {
   line-height: normal;
   margin-bottom: 11px;
 }
-.footer-links {
+.bl_footer_links {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
 }
-.footer-links a {
+.bl_footer_links a {
   color: #000;
 
   /* h3 */
@@ -830,34 +843,39 @@ footer .information {
   line-height: normal;
 }
 
-.social-container {
+.bl_followUs_socialMedia {
   display: flex;
   gap: 6px;
 }
 
-.social-item {
+.bl_followUs_socialMedia_item {
   position: relative;
   height: 36px;
   width: 36px;
   border-radius: 50%;
   background-color: #f7f6f0;
 }
-.social-item img {
+.bl_followUs_socialMedia_item img {
   position: absolute;
   width: 20px;
   height: 20px;
   left: 8px;
   top: 8px;
 }
-.social-item:hover {
+.bl_followUs_socialMedia_item:hover {
   background-color: rgba(53, 35, 35, 0.35);
 }
-.rules-container {
+
+.bl_rules {
+  margin: 230px 16px 12px 0;
+}
+
+.bl_rule_items {
   display: flex;
   gap: 20px;
 }
 
-.rules-container a {
+.bl_rule_items a {
   color: #000;
   font-family: Inter;
   font-size: 16px;
@@ -866,7 +884,7 @@ footer .information {
   line-height: normal;
 }
 
-.copyright {
+.bl_footer_copyright {
   display: flex;
   padding: 13px 0px 12px 0px;
   justify-content: center;
@@ -874,7 +892,7 @@ footer .information {
   background: #000;
 }
 
-.copyright div {
+.bl_footer_copyright div {
   color: #fff;
   font-family: Inter;
   font-size: 16px;
